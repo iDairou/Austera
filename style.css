@@ -1,0 +1,58 @@
+/********* RWD ********/
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(images/images/Austera_template-Symu_co_01.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(images/images/Austera_template-Symu_co_01.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+header .hero-container {
+  margin: auto;
+  position: relative;
+}
+
+header .hero-container h1 {
+  font-size: 72px;
+  font-weight: bold;
+}
+
+header .hero-container h1 span {
+  color: #2ebaee;
+}
+
+header .hero-container p {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 74px;
+}
+
+header .hero-container .btn {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #2ebaee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 215px;
+  height: 51px;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 200px;
+}
+/*# sourceMappingURL=style.css.map */
