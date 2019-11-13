@@ -6,6 +6,7 @@ $extra-small: 767px;
 
 // COLOR BIND
 $blue-austera: #2ebaee;
+$color: #0cf;
 
 
 
@@ -41,42 +42,85 @@ header {
             font-size: 24px;
             margin-bottom: 74px;
         }
-
-        .btn {
-            color: #fff;
-            font-size: 18px;
-            font-weight: bold;
-            background-color: $blue-austera;
-            display: flex;
-            width: 215px;
-            height: 51px;
-            margin: auto;
-            align-items: center;
-            justify-content: center;
-            border-radius: 200px;
-        }
     }
 }
 
+// BUTTONS Style and Animate
 
-
-
-.btn-services {
+.btn {
     color: #fff;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
+    background-color: $blue-austera;
     display: flex;
-    width: 152px;
-    height: 44px;
+    width: 215px;
+    height: 51px;
+    margin: auto;
     align-items: center;
     justify-content: center;
     border-radius: 200px;
-    background-color: $blue-austera;
-    text-decoration: none;
-    margin: auto;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color;
+        border-radius: 200px;
+        z-index: -2;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: darken($color, 15%);
+        transition: all .3s;
+        border-radius: 200px;
+        z-index: -1;
+    }
+
+    &:hover {
+        color: #fff;
+
+        &:before {
+            width: 100%;
+        }
+    }
+
+    &:focus {
+        color: #fff;
+    }
 }
 
+.btn-services {
+    font-size: 14px;
+    width: 152px;
+    height: 44px;
+    text-decoration: none;
+
+}
+
+// SERVICES 
+
 .services {
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(-50deg, #fff 50%, $blue-austera 50%);
+    min-height: 500px;
+
+    a {
+        text-decoration: none;
+    }
+
     .container {
         width: 1300px;
         padding-bottom: 100px;
@@ -88,6 +132,11 @@ header {
 
         .position-2 {
             margin: auto auto auto 120px;
+            color: #fff;
+        }
+
+        .left {
+            background-color: #fff;
         }
 
         .skip {
@@ -97,7 +146,8 @@ header {
 
     }
 
-    //STYLING
+
+    //styling 
     h2 {
         color: #242424;
         font-size: 48px;
@@ -137,8 +187,15 @@ header {
 
 }
 
+// ******************** //
 .new-container {
     display: flex;
+
+    .col {
+        padding-left: 0;
+    }
+
+
 
     .col-5 {
         padding: 0;
@@ -159,6 +216,58 @@ header {
         }
     }
 }
+
+// IMAGES
+
+.images {
+    display: flex;
+
+
+    .col {
+        padding: 0;
+        width: 25%;
+
+
+        .image-center {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+
+            h4 {
+                font-size: 48px;
+                color: #fff;
+            }
+        }
+    }
+
+    .back1 {
+        background-image: url(images/images/image1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .back2 {
+        background-image: url(images/images/image2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .back3 {
+        background-image: url(images/images/image3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .back4 {
+        background-image: url(images/images/image4.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+
+
+// ABOUT US
 
 .about-us {
     .container {
@@ -199,10 +308,75 @@ header {
         }
     }
 }
-.footer{
+
+// FOOTER
+
+.footer {
     width: 100%;
+
     display: flex;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(images/images/footer-background.jpg);
     background-size: contain;
     background-repeat: no-repeat;
+
+    .container {
+        width: 1300px;
+
+        .row {
+            padding-top: 130px;
+            padding-bottom: 9rem;
+        }
+
+        ::placeholder {
+            color: #fff;
+        }
+    }
+
+    form {
+        display: grid;
+
+        .forming {
+            background: fixed;
+            color: #fff;
+            padding: 20px 17px;
+            border: 1px solid #535353;
+            border-radius: 5px;
+            margin-bottom: 23px;
+        }
+
+    }
+
+    h2 {
+        font-size: 74px;
+        font-weight: bold;
+        color: #fff;
+
+    }
+
+    p {
+        font-size: 30px;
+        color: #878787;
+
+        span {
+            color: $blue-austera;
+        }
+    }
+
+    .difr {
+        font-size: 18px;
+    }
+
+    .social-icons {
+        padding-top: 2rem;
+
+        a {
+            margin-right: 2rem;
+            opacity: 0.8;
+        }
+
+        a:hover {
+            opacity: 1;
+        }
+    }
+
 }

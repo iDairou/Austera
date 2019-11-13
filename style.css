@@ -36,7 +36,7 @@ header .hero-container p {
   margin-bottom: 74px;
 }
 
-header .hero-container .btn {
+.btn {
   color: #fff;
   font-size: 18px;
   font-weight: bold;
@@ -54,27 +54,66 @@ header .hero-container .btn {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 200px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0cf;
+  border-radius: 200px;
+  z-index: -2;
+}
+
+.btn:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #008fb3;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border-radius: 200px;
+  z-index: -1;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn:hover:before {
+  width: 100%;
+}
+
+.btn:focus {
+  color: #fff;
 }
 
 .btn-services {
-  color: #fff;
   font-size: 14px;
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 152px;
   height: 44px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 200px;
-  background-color: #2ebaee;
   text-decoration: none;
-  margin: auto;
+}
+
+.services {
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(-50deg, #fff 50%, #2ebaee 50%);
+  min-height: 500px;
+}
+
+.services a {
+  text-decoration: none;
 }
 
 .services .container {
@@ -88,6 +127,11 @@ header .hero-container .btn {
 
 .services .container .position-2 {
   margin: auto auto auto 120px;
+  color: #fff;
+}
+
+.services .container .left {
+  background-color: #fff;
 }
 
 .services .container .skip {
@@ -137,6 +181,10 @@ header .hero-container .btn {
   display: flex;
 }
 
+.new-container .col {
+  padding-left: 0;
+}
+
 .new-container .col-5 {
   padding: 0;
   margin: auto;
@@ -151,6 +199,52 @@ header .hero-container .btn {
   font-size: 14px;
   line-height: 30px;
   float: left;
+}
+
+.images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.images .col {
+  padding: 0;
+  width: 25%;
+}
+
+.images .col .image-center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.images .col .image-center h4 {
+  font-size: 48px;
+  color: #fff;
+}
+
+.images .back1 {
+  background-image: url(images/images/image1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.images .back2 {
+  background-image: url(images/images/image2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.images .back3 {
+  background-image: url(images/images/image3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.images .back4 {
+  background-image: url(images/images/image4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .about-us .container {
@@ -197,5 +291,76 @@ header .hero-container .btn {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(images/images/footer-background.jpg);
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.footer .container {
+  width: 1300px;
+}
+
+.footer .container .row {
+  padding-top: 130px;
+  padding-bottom: 9rem;
+}
+
+.footer .container ::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.footer .container :-ms-input-placeholder {
+  color: #fff;
+}
+
+.footer .container ::-ms-input-placeholder {
+  color: #fff;
+}
+
+.footer .container ::placeholder {
+  color: #fff;
+}
+
+.footer form {
+  display: -ms-grid;
+  display: grid;
+}
+
+.footer form .forming {
+  background: fixed;
+  color: #fff;
+  padding: 20px 17px;
+  border: 1px solid #535353;
+  border-radius: 5px;
+  margin-bottom: 23px;
+}
+
+.footer h2 {
+  font-size: 74px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.footer p {
+  font-size: 30px;
+  color: #878787;
+}
+
+.footer p span {
+  color: #2ebaee;
+}
+
+.footer .difr {
+  font-size: 18px;
+}
+
+.footer .social-icons {
+  padding-top: 2rem;
+}
+
+.footer .social-icons a {
+  margin-right: 2rem;
+  opacity: 0.8;
+}
+
+.footer .social-icons a:hover {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
