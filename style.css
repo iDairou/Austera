@@ -172,7 +172,7 @@ header .hero-container p {
 }
 
 .services .w-100 {
-  padding: 150px 0;
+  padding: 110px 0;
 }
 
 .new-container {
@@ -210,41 +210,39 @@ header .hero-container p {
 .images .col {
   padding: 0;
   width: 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  position: relative;
 }
 
-.images .col .image-center {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-.images .col .image-center h4 {
+.images .col h4 {
   font-size: 48px;
   color: #fff;
+  padding: 150px 62px;
+  font-weight: bold;
+}
+
+.images .col:hover {
+  background-color: #319bc3;
+  background-blend-mode: screen;
 }
 
 .images .back1 {
   background-image: url(images/images/image1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .images .back2 {
   background-image: url(images/images/image2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .images .back3 {
   background-image: url(images/images/image3.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .images .back4 {
   background-image: url(images/images/image4.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .about-us .container {
@@ -289,7 +287,7 @@ header .hero-container p {
   display: flex;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(images/images/footer-background.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(images/images/footer-background.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -323,6 +321,10 @@ header .hero-container p {
   display: grid;
 }
 
+.footer form textarea {
+  height: 18rem;
+}
+
 .footer form .forming {
   background: fixed;
   color: #fff;
@@ -330,12 +332,14 @@ header .hero-container p {
   border: 1px solid #535353;
   border-radius: 5px;
   margin-bottom: 23px;
+  margin-top: 10px;
 }
 
-.footer h2 {
+.footer h3 {
   font-size: 74px;
   font-weight: bold;
   color: #fff;
+  margin-top: 0;
 }
 
 .footer p {
