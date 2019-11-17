@@ -1,6 +1,14 @@
 /********* RWD ********/
 body {
   font-family: 'Montserrat', sans-serif;
+  position: relative;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 15;
 }
 
 header {
@@ -13,7 +21,47 @@ header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(images/images/austera-background.jpg);
   background-size: auto;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   color: #fff;
+}
+
+header .navbar-cont {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+}
+
+header .navbar-cont .collapse {
+  display: block !important;
+}
+
+header .navbar-cont .navbar-nav {
+  float: right;
+  padding-right: 200px;
+}
+
+header .navbar-cont .navbar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  padding: 30px 0;
+}
+
+header .navbar-cont .navbar .navbar-brand {
+  color: #fff;
+  padding-left: 100px;
+  font-size: 36px;
+}
+
+header .navbar-cont .navbar .nav-link {
+  color: white;
+  font-size: 18px;
+  margin-right: 45px;
+  display: initial;
+}
+
+header .navbar-cont .navbar .nav-link:hover {
+  color: #33a9da;
+  border-bottom: 2px solid #33a9da;
 }
 
 header .hero-container {
@@ -22,6 +70,7 @@ header .hero-container {
 }
 
 header .hero-container h1 {
+  text-align: center;
   font-size: 72px;
   font-weight: bold;
 }
@@ -104,6 +153,7 @@ header .hero-container p {
   width: 152px;
   height: 44px;
   text-decoration: none;
+  background-color: #fff;
 }
 
 .services {
@@ -112,22 +162,70 @@ header .hero-container p {
   min-height: 500px;
 }
 
+@media screen and (max-width: 1440px) {
+  .services {
+    background-image: -webkit-linear-gradient(-115deg, #fff 50%, #2ebaee 50%);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .services .col {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
 .services a {
   text-decoration: none;
 }
 
 .services .container {
-  width: 1300px;
   padding-bottom: 100px;
+}
+
+@media screen and (min-width: 1440px) {
+  .services .container {
+    max-width: 1300px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .services .container .w-100 {
+    padding: 50px 0;
+  }
+}
+
+@media screen and (max-width: 1761px) {
+  .services .container .col-6 img {
+    width: inherit;
+  }
 }
 
 .services .container .position-1 {
   margin: auto 120px auto auto;
 }
 
+@media screen and (max-width: 990px) {
+  .services .container .position-1 {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .services .container .position-1 {
+    color: #fff;
+  }
+}
+
 .services .container .position-2 {
   margin: auto auto auto 120px;
   color: #fff;
+}
+
+@media screen and (max-width: 990px) {
+  .services .container .position-2 {
+    margin: auto;
+  }
 }
 
 .services .container .left {
@@ -179,26 +277,82 @@ header .hero-container p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  height: 70vh;
 }
 
-.new-container .col {
+.new-container .col-6 {
+  background-image: url(/images/images/random-guy.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-left: 0;
 }
 
-.new-container .col-5 {
-  padding: 0;
-  margin: auto;
-  padding-right: 250px;
+@media screen and (max-width: 1440px) {
+  .new-container .cover {
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 100% !important;
+            flex: 0 0 100% !important;
+    max-width: 100%;
+    position: relative;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(/images/images/random-guy.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/images/random-guy.jpg);
+  }
 }
 
-.new-container .col-5 h4 {
+.new-container .col {
+  margin: auto;
+  padding-right: 250px;
+  padding-left: 80px;
+}
+
+@media screen and (max-width: 1440px) {
+  .new-container .col {
+    position: absolute;
+    padding: auto;
+    color: #fff;
+    text-align: center;
+    padding: 10rem;
+  }
+}
+
+@media screen and (max-width: 703px) {
+  .new-container .col {
+    padding: 7rem;
+  }
+}
+
+.new-container .col h4 {
   font-size: 72px;
 }
 
-.new-container .col-5 p {
+@media screen and (max-width: 838px) {
+  .new-container .col h4 {
+    font-size: 50px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 703px) {
+  .new-container .col h4 {
+    font-size: 40px;
+  }
+}
+
+.new-container .col p {
   font-size: 14px;
   line-height: 30px;
   float: left;
+}
+
+@media screen and (max-width: 838px) {
+  .new-container .col p {
+    font-size: 14px;
+    margin-bottom: 3rem;
+    line-height: 25px;
+  }
 }
 
 .images {
@@ -207,14 +361,43 @@ header .hero-container p {
   display: flex;
 }
 
+.images .w-100 {
+  width: 0 !important;
+}
+
+@media screen and (max-width: 1688px) {
+  .images .w-100 {
+    width: 100% !important;
+  }
+}
+
+.images .row {
+  margin: 0;
+}
+
+@media screen and (max-width: 838px) {
+  .images .row {
+    display: -ms-grid;
+    display: grid;
+    margin: 0;
+  }
+}
+
 .images .col {
   padding: 0;
   width: 25%;
   background-size: cover;
   background-repeat: no-repeat;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all .3s;
+  transition: all .3s;
   position: relative;
+  background-blend-mode: screen;
+}
+
+@media screen and (max-width: 838px) {
+  .images .col {
+    width: 100%;
+  }
 }
 
 .images .col h4 {
@@ -226,7 +409,6 @@ header .hero-container p {
 
 .images .col:hover {
   background-color: #319bc3;
-  background-blend-mode: screen;
 }
 
 .images .back1 {
@@ -246,8 +428,18 @@ header .hero-container p {
 }
 
 .about-us .container {
-  width: 1300px;
+  max-width: 1300px;
   padding-bottom: 100px;
+}
+
+.about-us .container .w-100 {
+  width: 0 !important;
+}
+
+@media screen and (max-width: 1199px) {
+  .about-us .container .w-100 {
+    width: 100% !important;
+  }
 }
 
 .about-us .container h2 {
@@ -262,6 +454,12 @@ header .hero-container p {
   color: #2ebaee;
 }
 
+@media screen and (max-width: 1199px) {
+  .about-us .container .col {
+    padding-bottom: 3rem;
+  }
+}
+
 .about-us .container .col img {
   display: block;
   margin-left: auto;
@@ -272,6 +470,18 @@ header .hero-container p {
   font-size: 33px;
   text-align: center;
   padding-top: 40px;
+}
+
+@media screen and (max-width: 1440px) {
+  .about-us .container .col h5 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .about-us .container .col h5 {
+    padding-top: 0.5rem;
+  }
 }
 
 .about-us .container .col p {
@@ -289,10 +499,11 @@ header .hero-container p {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(images/images/footer-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .footer .container {
-  width: 1300px;
+  max-width: 1300px;
 }
 
 .footer .container .row {
@@ -322,7 +533,7 @@ header .hero-container p {
 }
 
 .footer form textarea {
-  height: 18rem;
+  height: 10rem;
 }
 
 .footer form .forming {
@@ -359,9 +570,22 @@ header .hero-container p {
   padding-top: 2rem;
 }
 
+@media screen and (max-width: 1199px) {
+  .footer .social-icons {
+    padding-top: 0;
+    padding-bottom: 3rem;
+  }
+}
+
 .footer .social-icons a {
   margin-right: 2rem;
   opacity: 0.8;
+}
+
+@media screen and (max-width: 990px) {
+  .footer .social-icons a img {
+    margin-bottom: 1rem;
+  }
 }
 
 .footer .social-icons a:hover {
