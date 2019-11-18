@@ -47,7 +47,7 @@ body {
 .navbar-cont .navbar .nav-link {
   color: white;
   font-size: 18px;
-  margin-right: 45px;
+  margin-right: 20px;
 }
 
 .navbar-cont .navbar .nav-link:hover {
@@ -288,7 +288,6 @@ header .hero-container p {
 
 .new-container .col-6 {
   background-image: url(/images/images/random-guy.jpg);
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-left: 0;
