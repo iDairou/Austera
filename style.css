@@ -4,11 +4,55 @@ body {
   position: relative;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
+.navbar-cont {
   width: 100%;
-  z-index: 15;
+  margin: 0 auto;
+  position: absolute;
+}
+
+.navbar-cont .w-100 {
+  width: 45% !important;
+}
+
+.navbar-cont .navbar-nav {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+}
+
+.navbar-cont .navbar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  padding: 30px 0;
+}
+
+.navbar-cont .navbar #circle {
+  position: absolute;
+  bottom: 21px;
+}
+
+.navbar-cont .navbar img {
+  width: 12px;
+  height: 12px;
+}
+
+.navbar-cont .navbar .navbar-brand {
+  color: #fff;
+  margin-left: 100px;
+  font-size: 36px;
+  position: relative;
+}
+
+.navbar-cont .navbar .nav-link {
+  color: white;
+  font-size: 18px;
+  margin-right: 45px;
+}
+
+.navbar-cont .navbar .nav-link:hover {
+  color: #33a9da;
+  border-bottom: 2px solid #33a9da;
 }
 
 header {
@@ -23,45 +67,6 @@ header {
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #fff;
-}
-
-header .navbar-cont {
-  width: 100%;
-  margin: 0 auto;
-  position: absolute;
-}
-
-header .navbar-cont .collapse {
-  display: block !important;
-}
-
-header .navbar-cont .navbar-nav {
-  float: right;
-  padding-right: 200px;
-}
-
-header .navbar-cont .navbar {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7) !important;
-  padding: 30px 0;
-}
-
-header .navbar-cont .navbar .navbar-brand {
-  color: #fff;
-  padding-left: 100px;
-  font-size: 36px;
-}
-
-header .navbar-cont .navbar .nav-link {
-  color: white;
-  font-size: 18px;
-  margin-right: 45px;
-  display: initial;
-}
-
-header .navbar-cont .navbar .nav-link:hover {
-  color: #33a9da;
-  border-bottom: 2px solid #33a9da;
 }
 
 header .hero-container {
@@ -451,7 +456,7 @@ header .hero-container p {
 }
 
 .about-us .container h2 span {
-  color: #2ebaee;
+  color: #11c0ff;
 }
 
 @media screen and (max-width: 1199px) {
@@ -512,19 +517,19 @@ header .hero-container p {
 }
 
 .footer .container ::-webkit-input-placeholder {
-  color: #fff;
+  color: #a8a6a6;
 }
 
 .footer .container :-ms-input-placeholder {
-  color: #fff;
+  color: #a8a6a6;
 }
 
 .footer .container ::-ms-input-placeholder {
-  color: #fff;
+  color: #a8a6a6;
 }
 
 .footer .container ::placeholder {
-  color: #fff;
+  color: #a8a6a6;
 }
 
 .footer form {
@@ -532,11 +537,22 @@ header .hero-container p {
   display: grid;
 }
 
-.footer form textarea {
-  height: 10rem;
+.footer form label {
+  color: #fff;
 }
 
-.footer form .forming {
+.footer form textarea {
+  height: 10rem;
+  background: fixed;
+  color: #fff;
+  padding: 20px 17px;
+  border: 1px solid #535353;
+  border-radius: 5px;
+  margin-bottom: 23px;
+  margin-top: 10px;
+}
+
+.footer form input {
   background: fixed;
   color: #fff;
   padding: 20px 17px;

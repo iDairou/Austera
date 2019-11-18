@@ -14,62 +14,57 @@ body {
     position: relative;
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
+.navbar-cont {
     width: 100%;
-    z-index: 15;
+    margin: 0 auto;
+    position: absolute;
+.w-100{
+    width: 45%!important;
+}
+
+    .navbar-nav {
+        flex-flow: row;
+    }
+
+    .navbar {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7) !important;
+        padding: 30px 0;
+        #circle{
+            position: absolute;
+            bottom: 21px;
+        }
+img{
+    width: 12px;
+    height: 12px;
+}
+        .navbar-brand {
+            color: #fff;
+            margin-left: 100px;
+            font-size: 36px;
+            position: relative;
+        }
+
+        .nav-link {
+            color: white;
+            font-size: 18px;
+            margin-right: 45px;
+        }
+
+        .nav-link:hover {
+            color: #33a9da;
+            border-bottom: 2px solid #33a9da;
+        }
+    }
 }
 
 header {
-    .navbar-cont {
-        width: 100%;
-        margin: 0 auto;
-        position: absolute;
-
-        .collapse {
-            display: block !important;
-        }
-
-        .navbar-nav {
-            float: right;
-            padding-right: 200px;
-
-        }
-
-        .navbar {
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.7) !important;
-            padding: 30px 0;
-
-            .navbar-brand {
-                color: #fff;
-                padding-left: 100px;
-                font-size: 36px;
-
-            }
-
-            .nav-link {
-                color: white;
-                font-size: 18px;
-                margin-right: 45px;
-
-                display: initial;
-            }
-
-            .nav-link:hover {
-                color: #33a9da;
-                border-bottom: 2px solid #33a9da;
-            }
-        }
-
-    }
 
     width: 100%;
     height: 100vh;
     display: flex;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(images/images/austera-background.jpg);
+        url(images/images/austera-background.jpg);
     background-size: auto;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -205,7 +200,6 @@ header {
             }
         }
 
-
         .position-1 {
             margin: auto 120px auto auto;
 
@@ -283,10 +277,6 @@ header {
     width: 100%;
     height: 70vh;
 
-
-
-
-
     .col-6 {
 
         background-image: url(/images/images/random-guy.jpg);
@@ -294,7 +284,6 @@ header {
         background-repeat: no-repeat;
         background-size: cover;
         padding-left: 0;
-
     }
 
     .cover {
@@ -322,8 +311,6 @@ header {
         @media screen and (max-width: 703px) {
             padding: 7rem;
         }
-
-
 
         h4 {
             font-size: 72px;
@@ -447,7 +434,7 @@ header {
             font-weight: bold;
 
             span {
-                color: $blue-austera;
+                color: #11c0ff;
             }
         }
 
@@ -505,18 +492,28 @@ header {
         }
 
         ::placeholder {
-            color: #fff;
+            color: rgb(168, 166, 166);
         }
     }
 
     form {
         display: grid;
-
+label{
+    color:#fff;
+}
         textarea {
             height: 10rem;
+            background: fixed;
+            color: #fff;
+            padding: 20px 17px;
+            border: 1px solid #535353;
+            border-radius: 5px;
+            margin-bottom: 23px;
+            margin-top: 10px;
+            
         }
 
-        .forming {
+        input {
             background: fixed;
             color: #fff;
             padding: 20px 17px;
@@ -570,5 +567,4 @@ header {
             opacity: 1;
         }
     }
-
 }

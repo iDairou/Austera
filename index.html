@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="Description" content="...">
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -14,13 +15,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" type="image/png" href="/images/images/favicon-32x32.png" sizes="32x32" />
     <title>Austera</title>
 </head>
 
@@ -98,34 +101,36 @@
             </div>
         </div>
     </div>
-
+    <div class='navbar-cont'>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <a class="navbar-brand" href="#">Austera<span id='circle'><img src="images/images/favicon-32x32.png" alt="Q"></span></a>
+<div class='w-100'>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
     <header id='home'>
-        <div class='navbar-cont'>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky">
-                <a class="navbar-brand" href="#">Austera</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+
         <div class='hero-container'>
             <h1><span>Austera</span> is simple PSD template</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -198,9 +203,8 @@
 
 
                 </div>
-                <div class="col-6"  data-aos="fade-up-left" data-aos-duration="1500" >
-                    <img src="images/images/image-service1.png"
-                        alt="image1">
+                <div class="col-6" data-aos="fade-up-left" data-aos-duration="1500">
+                    <img src="images/images/image-service1.png" alt="image1">
                 </div>
                 <div class="w-100"></div>
                 <div class="col-6">
@@ -219,7 +223,7 @@
     </section>
     <div class='new-container'>
         <div class="col-6 cover">
-         
+
         </div>
         <div class="col">
             <h4>Lorem ipsum dolor sit amet</h4>
@@ -231,20 +235,20 @@
     </div>
     <div class='images'>
         <div class='row'>
-        <div class="col back1">
-            <h4>Lorem ipsum dolor sit amet</h4>
+            <div class="col back1">
+                <h4>Lorem ipsum dolor sit amet</h4>
+            </div>
+            <div class="col back2">
+                <h4>Nunc fringilla tortor urna </h4>
+            </div>
+            <div class="w-100"></div>
+            <div class="col back3">
+                <h4>Nulla pilvinar pulvinar est</h4>
+            </div>
+            <div class="col back4">
+                <h4>Fusce at diam condim</h4>
+            </div>
         </div>
-        <div class="col back2">
-            <h4>Nunc fringilla tortor urna </h4>
-        </div>
-        <div class="w-100"></div>
-        <div class="col back3">
-            <h4>Nulla pilvinar pulvinar est</h4>
-        </div>
-        <div class="col back4">
-            <h4>Fusce at diam condim</h4>
-        </div>
-    </div>
     </div>
     <section class='about-us' id='about'>
         <div class='container'>
@@ -311,12 +315,16 @@
                 </div>
                 <div class="col">
                     <form>
-                       <input class='forming' type="text" placeholder="Your name" onfocus="this.placeholder = ''"
-                            onblur="this.placeholder = 'Your name'" />
-                        <input class='forming' type="email" placeholder="Your e-mail adress"
-                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your e-mail adress'">
-                        <textarea class='forming' size="10000" placeholder="Your message"
-                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your message'"></textarea>
+                        <label for='name'>Name:</label>
+                        <input type="text" placeholder="Your name" onfocus="this.placeholder = ''"
+                            onblur="this.placeholder = 'Your name'" id='name' />
+                        <label for='email'>Email:</label>
+                        <input type="email" placeholder="Your e-mail adress"
+                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your e-mail adress'" id='email'>
+                        <label for='message'>Message:</label>
+                        <textarea placeholder="Your message"
+                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your message'"
+                            id='message'></textarea>
                         <a href='#' class="btn btn-services left animate" rel='noopener'>Send message</a>
                     </form>
                 </div>
@@ -328,16 +336,14 @@
         AOS.init({
             once: true,
         });
-        $('a[href^="#"]').on('click', function(event) {
-    var target = $(this.getAttribute('href'));
-    if( target.length ) {
-        event.preventDefault();
-        $('html, body').stop().animate({
-            scrollTop: target.offset().top
-        }, 700);
-    }
-});
-
-
+        $('a[href^="#"]').on('click', function (event) {
+            var target = $(this.getAttribute('href'));
+            if (target.length) {
+                event.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top
+                }, 700);
+            }
+        });
     </script>
 </body>
