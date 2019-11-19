@@ -287,7 +287,7 @@ header .hero-container p {
 }
 
 .new-container .col-6 {
-  background-image: url(/images/images/random-guy.jpg);
+  background-image: url(images/images/random-guy.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding-left: 0;
@@ -300,8 +300,8 @@ header .hero-container p {
             flex: 0 0 100% !important;
     max-width: 100%;
     position: relative;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(/images/images/random-guy.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/images/random-guy.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(images/images/random-guy.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/images/random-guy.jpg);
   }
 }
 
