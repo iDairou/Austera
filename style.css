@@ -74,6 +74,10 @@ header .hero-container {
   position: relative;
 }
 
+header .hero-container .circle-position {
+  margin: auto;
+}
+
 header .hero-container h1 {
   text-align: center;
   font-size: 72px;
@@ -206,6 +210,11 @@ header .hero-container p {
   .services .container .row {
     display: block;
   }
+}
+
+.services .container .direction {
+  margin-right: 0;
+  margin-left: 0;
 }
 
 @media screen and (max-width: 482px) {
@@ -592,15 +601,8 @@ header .hero-container p {
 }
 
 .footer .container .row {
-  padding-top: 130px;
-  padding-bottom: 9rem;
-}
-
-@media screen and (max-width: 482px) {
-  .footer .container .row {
-    padding-top: 70px;
-    padding-bottom: 7rem;
-  }
+  padding-top: 70px;
+  padding-bottom: 7rem;
 }
 
 .footer .container ::-webkit-input-placeholder {
@@ -735,5 +737,98 @@ header .hero-container p {
 
 .footer .social-icons a:hover {
   opacity: 1;
+}
+
+.loader {
+  max-width: 15rem;
+  width: 100%;
+  height: auto;
+  stroke-linecap: round;
+  display: block;
+  margin: auto;
+}
+
+@media screen and (max-width: 1199px) {
+  .loader {
+    max-width: 10rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .loader {
+    max-width: 7rem;
+  }
+}
+
+@media screen and (max-width: 482px) {
+  .loader {
+    max-width: 3rem;
+  }
+}
+
+circle {
+  fill: none;
+  stroke-width: 3.5;
+  -webkit-animation-name: preloader;
+          animation-name: preloader;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-transform-origin: 170px 170px;
+          transform-origin: 170px 170px;
+  will-change: transform;
+}
+
+circle:nth-of-type(1) {
+  stroke-dasharray: 550px;
+}
+
+circle:nth-of-type(2) {
+  stroke-dasharray: 500px;
+}
+
+circle:nth-of-type(3) {
+  stroke-dasharray: 450px;
+}
+
+circle:nth-of-type(4) {
+  stroke-dasharray: 300px;
+}
+
+circle:nth-of-type(1) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+
+circle:nth-of-type(2) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+circle:nth-of-type(3) {
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+
+circle:nth-of-type(4) {
+  -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s;
+}
+
+@-webkit-keyframes preloader {
+  50% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader {
+  50% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -74,6 +74,10 @@ header {
     .hero-container {
         margin: auto;
         position: relative;
+        .circle-position{
+           
+            margin: auto;
+        }
 
         h1 {
             span {
@@ -197,6 +201,8 @@ header {
         }
     
         .direction{
+            margin-right: 0;
+            margin-left: 0;
             @media screen and (max-width: $super-small) {
                 display: flex;
                 flex-direction: column-reverse;
@@ -534,12 +540,9 @@ header {
         max-width: 1300px;
 
         .row {
-            padding-top: 130px;
-            padding-bottom: 9rem;
-            @media screen and (max-width: $super-small){
-                padding-top: 70px;
-                padding-bottom: 7rem;
-            }
+            padding-top: 70px;
+            padding-bottom: 7rem;
+           
         }
 
         ::placeholder {
@@ -639,4 +642,69 @@ label{
             opacity: 1;
         }
     }
+}
+
+
+// CIRCLES
+
+
+.loader {
+	max-width: 15rem;
+	width: 100%;
+	height: auto;
+    stroke-linecap: round;
+    display: block;
+    margin: auto;
+
+    @media screen and (max-width: $medium){
+        max-width: 10rem;
+    }
+    
+    @media screen and (max-width: $extra-small){
+        max-width: 7rem;
+    }
+    @media screen and (max-width: $super-small){
+        max-width: 3rem;
+    }
+
+}
+
+circle {
+	fill: none;
+	stroke-width: 3.5;
+	animation-name: preloader;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	transform-origin: 170px 170px;
+    will-change: transform;
+    
+
+	&:nth-of-type(1) {
+		stroke-dasharray: 550px;
+	}
+
+	&:nth-of-type(2) {
+		stroke-dasharray: 500px;
+	}
+
+	&:nth-of-type(3) {
+		stroke-dasharray: 450px;
+	}
+
+	&:nth-of-type(4) {
+		stroke-dasharray: 300px;
+	}
+
+	@for $i from 1 through 4 {
+		&:nth-of-type(#{$i}) {
+			animation-delay: -#{$i * 0.15}s;
+		}
+	}
+}
+
+@keyframes preloader {
+	50% {
+		transform: rotate(360deg);
+	}
 }
