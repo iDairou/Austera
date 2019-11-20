@@ -354,7 +354,7 @@ header {
             padding: 7rem;
         }
         @media screen and (max-width: $super-small){
-            padding: 3rem;
+            padding: 4rem;
         }
 
         h4 {
@@ -369,6 +369,9 @@ header {
             @media screen and (max-width: 703px) {
                 font-size: 40px;
             }
+            @media screen and (max-width: $super-small){
+                font-size: 32px;
+            }
         }
 
         p {
@@ -380,6 +383,11 @@ header {
                 font-size: 14px;
                 margin-bottom: 3rem;
                 line-height: 25px;
+            }
+            @media screen and (max-width: $super-small){
+                font-size: 12px;
+                margin-bottom: 2rem;
+                line-height: 20px;
             }
         }
     }
@@ -426,6 +434,9 @@ header {
             color: #fff;
             padding: 150px 62px;
             font-weight: bold;
+            @media screen and (max-width: $extra-small){
+                padding: 150px 54px;
+            }
         }
     }
 
@@ -554,9 +565,7 @@ header {
         display: grid;
 label{
     color:#fff;
-    @media screen and (max-width: $super-small){
-        margin-bottom: -9px
-    }
+    margin-bottom: -9px;
 }
         textarea {
             height: 10rem;

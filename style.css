@@ -399,7 +399,7 @@ header .hero-container p {
 
 @media screen and (max-width: 482px) {
   .new-container .col {
-    padding: 3rem;
+    padding: 4rem;
   }
 }
 
@@ -421,6 +421,12 @@ header .hero-container p {
   }
 }
 
+@media screen and (max-width: 482px) {
+  .new-container .col h4 {
+    font-size: 32px;
+  }
+}
+
 .new-container .col p {
   font-size: 14px;
   line-height: 30px;
@@ -432,6 +438,14 @@ header .hero-container p {
     font-size: 14px;
     margin-bottom: 3rem;
     line-height: 25px;
+  }
+}
+
+@media screen and (max-width: 482px) {
+  .new-container .col p {
+    font-size: 12px;
+    margin-bottom: 2rem;
+    line-height: 20px;
   }
 }
 
@@ -485,6 +499,12 @@ header .hero-container p {
   color: #fff;
   padding: 150px 62px;
   font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .images .col h4 {
+    padding: 150px 54px;
+  }
 }
 
 .images .col:hover {
@@ -628,12 +648,7 @@ header .hero-container p {
 
 .footer form label {
   color: #fff;
-}
-
-@media screen and (max-width: 482px) {
-  .footer form label {
-    margin-bottom: -9px;
-  }
+  margin-bottom: -9px;
 }
 
 .footer form textarea {
