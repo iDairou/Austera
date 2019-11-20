@@ -84,10 +84,24 @@ header .hero-container h1 span {
   color: #2ebaee;
 }
 
+@media screen and (max-width: 767px) {
+  header .hero-container h1 {
+    font-size: 62px;
+  }
+}
+
 header .hero-container p {
   text-align: center;
   font-size: 24px;
   margin-bottom: 74px;
+}
+
+@media screen and (max-width: 482px) {
+  header .hero-container p {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
 }
 
 .btn {
@@ -176,7 +190,7 @@ header .hero-container p {
 @media screen and (max-width: 767px) {
   .services .col {
     padding-right: 30px;
-    padding-left: 30px;
+    padding-left: 40px;
   }
 }
 
@@ -186,6 +200,24 @@ header .hero-container p {
 
 .services .container {
   padding-bottom: 100px;
+}
+
+@media screen and (max-width: 482px) {
+  .services .container .row {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 482px) {
+  .services .container .direction {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -203,6 +235,16 @@ header .hero-container p {
 @media screen and (max-width: 1761px) {
   .services .container .col-6 img {
     width: inherit;
+  }
+}
+
+@media screen and (max-width: 482px) {
+  .services .container .col-6 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 86%;
+            flex: 0 0 86%;
+    max-width: 86%;
+    padding-bottom: 2rem;
   }
 }
 
@@ -248,10 +290,23 @@ header .hero-container p {
   text-align: center;
 }
 
+@media screen and (max-width: 482px) {
+  .services h2 {
+    font-size: 42px;
+    padding: 60px 0;
+  }
+}
+
 .services h3 {
   font-size: 24px;
   padding: 50px 0 30px 0;
   font-weight: bold;
+}
+
+@media screen and (max-width: 482px) {
+  .services h3 {
+    padding: 15px 0 6px 0;
+  }
 }
 
 .services h4 {
@@ -264,6 +319,12 @@ header .hero-container p {
   font-size: 14px;
   margin-bottom: 70px;
   line-height: 27px;
+}
+
+@media screen and (max-width: 482px) {
+  .services p {
+    margin-bottom: 40px;
+  }
 }
 
 .services .position-of-par {
@@ -324,6 +385,12 @@ header .hero-container p {
 @media screen and (max-width: 703px) {
   .new-container .col {
     padding: 7rem;
+  }
+}
+
+@media screen and (max-width: 482px) {
+  .new-container .col {
+    padding: 3rem;
   }
 }
 
@@ -436,6 +503,12 @@ header .hero-container p {
   padding-bottom: 100px;
 }
 
+@media screen and (max-width: 482px) {
+  .about-us .container {
+    padding-bottom: 40px;
+  }
+}
+
 .about-us .container .w-100 {
   width: 0 !important;
 }
@@ -452,6 +525,14 @@ header .hero-container p {
   line-height: 70px;
   font-size: 72px;
   font-weight: bold;
+}
+
+@media screen and (max-width: 482px) {
+  .about-us .container h2 {
+    font-size: 51px;
+    padding: 65px 0;
+    line-height: 55px;
+  }
 }
 
 .about-us .container h2 span {
@@ -515,6 +596,13 @@ header .hero-container p {
   padding-bottom: 9rem;
 }
 
+@media screen and (max-width: 482px) {
+  .footer .container .row {
+    padding-top: 70px;
+    padding-bottom: 7rem;
+  }
+}
+
 .footer .container ::-webkit-input-placeholder {
   color: #a8a6a6;
 }
@@ -540,6 +628,12 @@ header .hero-container p {
   color: #fff;
 }
 
+@media screen and (max-width: 482px) {
+  .footer form label {
+    margin-bottom: -9px;
+  }
+}
+
 .footer form textarea {
   height: 10rem;
   background: fixed;
@@ -561,6 +655,12 @@ header .hero-container p {
   margin-top: 10px;
 }
 
+@media screen and (max-width: 482px) {
+  .footer form input {
+    margin-bottom: 15px;
+  }
+}
+
 .footer h3 {
   font-size: 74px;
   font-weight: bold;
@@ -568,9 +668,21 @@ header .hero-container p {
   margin-top: 0;
 }
 
+@media screen and (max-width: 482px) {
+  .footer h3 {
+    font-size: 42px;
+  }
+}
+
 .footer p {
   font-size: 30px;
   color: #878787;
+}
+
+@media screen and (max-width: 482px) {
+  .footer p {
+    font-size: 17px;
+  }
 }
 
 .footer p span {
@@ -579,6 +691,12 @@ header .hero-container p {
 
 .footer .difr {
   font-size: 18px;
+}
+
+@media screen and (max-width: 482px) {
+  .footer .difr {
+    font-size: 15px;
+  }
 }
 
 .footer .social-icons {
@@ -597,9 +715,21 @@ header .hero-container p {
   opacity: 0.8;
 }
 
+@media screen and (max-width: 482px) {
+  .footer .social-icons a {
+    margin-right: 1rem;
+  }
+}
+
 @media screen and (max-width: 990px) {
   .footer .social-icons a img {
     margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 482px) {
+  .footer .social-icons a img {
+    max-width: 38px;
   }
 }
 

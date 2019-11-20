@@ -3,6 +3,7 @@ $large: 1440px;
 $medium: 1199px;
 $small: 990px;
 $extra-small: 767px;
+$super-small: 482px;
 $custom-small: 838px;
 
 // COLOR BIND
@@ -82,12 +83,20 @@ header {
             text-align: center;
             font-size: 72px;
             font-weight: bold;
+            @media screen and (max-width: $extra-small){
+                font-size: 62px
+            }
         }
 
         p {
             text-align: center;
             font-size: 24px;
             margin-bottom: 74px;
+            @media screen and (max-width: $super-small){
+                font-size: 20px;
+                margin-top: 20px;
+                margin-bottom: 30px
+            }
         }
     }
 }
@@ -171,7 +180,7 @@ header {
     .col {
         @media screen and (max-width: $extra-small) {
             padding-right: 30px;
-            padding-left: 30px;
+            padding-left: 40px;
         }
     }
 
@@ -181,6 +190,19 @@ header {
 
     .container {
         padding-bottom: 100px;
+        .row{
+            @media screen and (max-width: $super-small){
+                display: block;
+            }
+        }
+    
+        .direction{
+            @media screen and (max-width: $super-small) {
+                display: flex;
+                flex-direction: column-reverse;
+                
+            }
+        }
 
         @media screen and (min-width: 1440px) {
             max-width: 1300px;
@@ -197,6 +219,11 @@ header {
                 @media screen and (max-width: 1761px) {
                     width: inherit;
                 }
+            }
+            @media screen and (max-width: $super-small){
+                flex: 0 0 86%;
+                max-width: 86%;
+                padding-bottom: 2rem;
             }
         }
 
@@ -237,12 +264,20 @@ header {
         font-size: 48px;
         padding: 80px 0;
         text-align: center;
+        @media screen and (max-width: $super-small){
+            font-size: 42px;
+            padding: 60px 0;
+        }
     }
 
     h3 {
         font-size: 24px;
         padding: 50px 0 30px 0;
         font-weight: bold;
+        @media screen and (max-width: $super-small) {
+            padding: 15px 0 6px 0;
+            
+        }
     }
 
     h4 {
@@ -255,6 +290,9 @@ header {
         font-size: 14px;
         margin-bottom: 70px;
         line-height: 27px;
+        @media screen and (max-width: $super-small) {
+            margin-bottom: 40px;
+        }
     }
 
     .position-of-par {
@@ -308,6 +346,9 @@ header {
 
         @media screen and (max-width: 703px) {
             padding: 7rem;
+        }
+        @media screen and (max-width: $super-small){
+            padding: 3rem;
         }
 
         h4 {
@@ -414,6 +455,9 @@ header {
     .container {
         max-width: 1300px;
         padding-bottom: 100px;
+        @media screen and(max-width: $super-small){
+            padding-bottom: 40px;
+        }
 
         .w-100 {
             width: 0 !important;
@@ -430,6 +474,11 @@ header {
             line-height: 70px;
             font-size: 72px;
             font-weight: bold;
+            @media screen and (max-width: $super-small){
+                font-size: 51px;
+                padding: 65px 0;
+                line-height: 55px;
+            }
 
             span {
                 color: #11c0ff;
@@ -487,6 +536,10 @@ header {
         .row {
             padding-top: 130px;
             padding-bottom: 9rem;
+            @media screen and (max-width: $super-small){
+                padding-top: 70px;
+                padding-bottom: 7rem;
+            }
         }
 
         ::placeholder {
@@ -498,6 +551,9 @@ header {
         display: grid;
 label{
     color:#fff;
+    @media screen and (max-width: $super-small){
+        margin-bottom: -9px
+    }
 }
         textarea {
             height: 10rem;
@@ -519,6 +575,9 @@ label{
             border-radius: 5px;
             margin-bottom: 23px;
             margin-top: 10px;
+            @media screen and (max-width: $super-small){
+                margin-bottom: 15px;
+            }
         }
     }
 
@@ -527,11 +586,17 @@ label{
         font-weight: bold;
         color: #fff;
         margin-top: 0;
+        @media screen and (max-width: $super-small){
+            font-size: 42px;
+        }
     }
 
     p {
         font-size: 30px;
         color: #878787;
+        @media screen and (max-width: $super-small){
+            font-size: 17px;
+        }
 
         span {
             color: $blue-austera;
@@ -540,6 +605,9 @@ label{
 
     .difr {
         font-size: 18px;
+        @media screen and (max-width: $super-small){
+            font-size: 15px;
+        }
     }
 
     .social-icons {
@@ -553,10 +621,16 @@ label{
         a {
             margin-right: 2rem;
             opacity: 0.8;
+            @media screen and (max-width: $super-small){
+                margin-right: 1rem;
+            }
 
             img {
                 @media screen and (max-width: $small) {
                     margin-bottom: 1rem;
+                }
+                @media screen and (max-width: $super-small){
+                    max-width: 38px;
                 }
             }
         }
