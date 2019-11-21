@@ -62,23 +62,22 @@ img{
 header {
 
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
         url(images/images/austera-background.jpg);
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #fff;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    
 
     .hero-container {
         margin: auto;
         position: relative;
-        .circle-position{
-           
-            margin: auto;
-        }
-
+        
         h1 {
             span {
                 color: $blue-austera;
@@ -401,9 +400,10 @@ header {
     .w-100 {
         width: 0 !important;
 
-        @media screen and (max-width:1688px) {
+        @media screen and (max-width:$medium) {
             width: 100% !important;
         }
+
 
     }
 
@@ -654,66 +654,66 @@ label{
 }
 
 
-// CIRCLES
+// // CIRCLES
 
 
-.loader {
-	max-width: 15rem;
-	width: 100%;
-	height: auto;
-    stroke-linecap: round;
-    display: block;
-    margin: auto;
+// .loader {
+// 	max-width: 15rem;
+// 	width: 100%;
+// 	height: auto;
+//     stroke-linecap: round;
+//     display: block;
+//     margin: auto;
 
-    @media screen and (max-width: $medium){
-        max-width: 10rem;
-    }
+//     @media screen and (max-width: $medium){
+//         max-width: 10rem;
+//     }
     
-    @media screen and (max-width: $extra-small){
-        max-width: 7rem;
-    }
-    @media screen and (max-width: $super-small){
-        max-width: 3rem;
-    }
+//     @media screen and (max-width: $extra-small){
+//         max-width: 7rem;
+//     }
+//     @media screen and (max-width: $super-small){
+//         max-width: 3rem;
+//     }
 
-}
+// }
 
-circle {
-	fill: none;
-	stroke-width: 3.5;
-	animation-name: preloader;
-	animation-duration: 3s;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease-in-out;
-	transform-origin: 170px 170px;
-    will-change: transform;
+// circle {
+// 	fill: none;
+// 	stroke-width: 3.5;
+// 	animation-name: preloader;
+// 	animation-duration: 3s;
+// 	animation-iteration-count: infinite;
+// 	animation-timing-function: ease-in-out;
+// 	transform-origin: 170px 170px;
+//     will-change: transform;
     
 
-	&:nth-of-type(1) {
-		stroke-dasharray: 550px;
-	}
+// 	&:nth-of-type(1) {
+// 		stroke-dasharray: 550px;
+// 	}
 
-	&:nth-of-type(2) {
-		stroke-dasharray: 500px;
-	}
+// 	&:nth-of-type(2) {
+// 		stroke-dasharray: 500px;
+// 	}
 
-	&:nth-of-type(3) {
-		stroke-dasharray: 450px;
-	}
+// 	&:nth-of-type(3) {
+// 		stroke-dasharray: 450px;
+// 	}
 
-	&:nth-of-type(4) {
-		stroke-dasharray: 300px;
-	}
+// 	&:nth-of-type(4) {
+// 		stroke-dasharray: 300px;
+// 	}
 
-	@for $i from 1 through 4 {
-		&:nth-of-type(#{$i}) {
-			animation-delay: -#{$i * 0.15}s;
-		}
-	}
-}
+// 	@for $i from 1 through 4 {
+// 		&:nth-of-type(#{$i}) {
+// 			animation-delay: -#{$i * 0.15}s;
+// 		}
+// 	}
+// }
 
-@keyframes preloader {
-	50% {
-		transform: rotate(360deg);
-	}
-}
+// @keyframes preloader {
+// 	50% {
+// 		transform: rotate(360deg);
+// 	}
+// }
