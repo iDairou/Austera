@@ -30,7 +30,7 @@
 
 <body>
 
-    <!-------------------- MODAL -------------------->
+    <!-------------------- MODALS -------------------->
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -52,7 +52,7 @@
         </div>
     </div>
 
-<!-------------------- MODAL -------------------->
+    <!-------------------- MODAL -------------------->
 
 
     <div class='navbar-cont'>
@@ -298,14 +298,26 @@
         AOS.init({
             once: true,
         });
-        // $('a[href^="#"]').on('click', function (event) {
-        //     let target = $(this.getAttribute('href'));
-        //     if (target.length) {
-        //         event.preventDefault();
-        //         $('html, body').stop().animate({
-        //             scrollTop: target.offset().top
-        //         }, 700);
-        //     }
-        // });
+        $('.navbar-cont a[href^="#"]').on('click', function (event) {
+            let target = $(this.getAttribute('href'));
+            if (target.length) {
+                event.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top
+                }, 700);
+            }
+        });
+
+        $('#about .btn').on('click', function (e) {
+
+            const parent = $(this).parent();
+            const description = parent.find('div').html();
+            const header = parent.find('h5').html();
+            let $title = $("#exampleModal .modal-title"),
+                $body = $("#exampleModal .modal-body");
+
+            $title.html(header);
+            $body.html(description);
+        });
     </script>
 </body>
