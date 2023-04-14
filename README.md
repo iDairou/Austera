@@ -10,4 +10,3 @@ The template has been cut in photoshop
 
 LIVE: https://idairou.github.io/Austera/
 
-Template: https://symu.co/freebies/templates-4/austera-psd-template/
